@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="player" aria-label="Music player">
+    <img id="cover" class="cover" src="" alt="" />
+
+    <div class="info">
+      <h1 id="title" class="title">Title</h1>
+      <p id="author" class="author">Author</p>
+    </div>
+
+    <div class="progress">
+      <input
+        id="progressBar"
+        class="progress-bar"
+        type="range"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+        aria-label="Seek"
+      />
+      <div class="times">
+        <span id="currentTime">00:00</span>
+        <span id="duration">00:00</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prevButton" class="btn btn-side" aria-label="Previous song">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9.5 12z"/></svg>
+      </button>
+
+      <button id="playButton" class="btn btn-play" aria-label="Play">
+        <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+
+      <button id="nextButton" class="btn btn-side" aria-label="Next song">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l10.5-7z"/></svg>
+      </button>
+    </div>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
